@@ -1,0 +1,44 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-5">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <label for="" class="form-label">Employee Name</label>
+                    <input name="name" [(ngModel)]="name" type="text" class="form-control">
+                </div>
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <button (click)="readValues()" class="btn btn-success">Search</button>
+                </div>
+            </div>
+            <div class="row g-3 mt-5">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <div class="row g-3 mt-4" *ngFor="let i of searchData">
+                        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <label for="" class="form-label">Name:</label>
+                            <!-- <label for="" class="form-label">{{i.name}}</label> -->
+                            <input type="text" class="form-control" value="{{i.name}}">
+                        </div>
+                        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <label for="" class="form-label">Email:</label>
+                            <!-- <label for="" class="form-label">{{i.email}}</label> -->
+                            <input type="text" class="form-control" value="{{i.email}}">
+                        </div>
+                        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <label for="" class="form-label">Task Name</label>
+                            <input type="text" name="taskName" [(ngModel)]="taskName" class="form-control">
+                        </div>
+                        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <label for="" class="form-label">Description</label>
+                            <textarea name="description" id="" cols="30" rows="5" class="form-control"></textarea>
+                            <input type="description" name="description" [(ngModel)]="phone" class="form-control">
+                        </div>
+                        <div class="col col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                            <button (click)="addTask(i.id)" class="btn btn-danger">Delete</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

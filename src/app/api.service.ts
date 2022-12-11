@@ -31,6 +31,6 @@ export class ApiService {
     return this.http.get("http://localhost:8080/adminviewtask")
   }
 
-  employeeTaskSearch=(employeename:any)=>
+  adminTaskSearch=(employeename:any)=>
   {return this.http.post("http://localhost:8080/adminsearchtask",employeename)}
 }
