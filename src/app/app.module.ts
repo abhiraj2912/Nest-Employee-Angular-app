@@ -40,6 +40,10 @@ const myRoute:Routes=[
   {
     path:"empviewtask",
     component:EmployeeTaskViewComponent
+  },
+  {
+    path:"updatestatus",
+    component:UpdateStatusComponent
   }
 ]
 

@@ -11,7 +11,7 @@ export class EmployeeTaskViewComponent {
   id=localStorage.getItem("userInfo")
 
   taskData:any=[]
-
+  status=""
   constructor(private api:ApiService){
     let data:any={"empid":this.id}
     api.employeeTaskView(data).subscribe(

@@ -41,5 +41,14 @@ export class ApiService {
     return this.http.post("http://localhost:8080/adminsearchemp",employeename)
   }
 
+  updateStatus=(taskdata:any)=>
+  {
+    return this.http.post("http://localhost:8080/updatestatus",taskdata)
+  }
+
+  employeesearchtask=(tasksearch:any)=>
+  {
+    return this.http.post("http://localhost:8080/employeesearchtask",tasksearch)
+  }
   
 }
