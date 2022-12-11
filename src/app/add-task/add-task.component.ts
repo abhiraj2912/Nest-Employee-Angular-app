@@ -11,7 +11,7 @@ export class AddTaskComponent {
   constructor (private api:ApiService){}
 
   name=""
-  productData:any=[]
+  searchData:any=[]
 
   taskName=""
   description=""
@@ -19,16 +19,16 @@ export class AddTaskComponent {
 
   readValues=()=>{
     let data ={"name":this.name}
-    this.api.adminTaskSearch(data).subscribe(
+    this.api.adminEmployeeSearch(data).subscribe(
       (response:any)=>{
-        this.productData=response
+        this.searchData=response
       }
     )
   }
 
-  addTask=(id:any)=>{
-    let taskdata ={"empid":id,"taskName":this.taskName,"description":this.description,"status":this.status}
-
+  addTask=(empid:any)=>{
+    let taskdata:any ={"empid":empid,"taskName":this.taskName,"description":this.description,"status":this.status}
+    console.log(taskdata)
     this.api.addTask(taskdata).subscribe(
       (response:any)=>{
         if (response.status=="success") {
@@ -40,5 +40,4 @@ export class AddTaskComponent {
       }
     )
   }
-
 }

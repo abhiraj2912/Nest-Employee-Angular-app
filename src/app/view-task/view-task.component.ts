@@ -9,12 +9,12 @@ import { ApiService } from '../api.service';
 })
 export class ViewTaskComponent {
   name=""
-  productData:any=[]
+  taskData:any=[]
 
   constructor(private api:ApiService){
     api.adminTaskView().subscribe(
       (response:any)=>{
-        this.productData=response
+        this.taskData=response
       }
     )
   }
@@ -23,7 +23,7 @@ export class ViewTaskComponent {
     let data ={"name":this.name}
     this.api.adminTaskSearch(data).subscribe(
       (response:any)=>{
-        this.productData=response
+        this.taskData=response
       }
     )
   }

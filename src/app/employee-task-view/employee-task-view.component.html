@@ -1,0 +1,27 @@
+<app-user-navbar></app-user-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+            <div class="row g-3 mt-5">
+                <div class="col col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">Task Name</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">Status</th>                          
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr *ngFor="let i of taskData">
+                            <td>{{i.taskName}}</td>
+                            <td>{{i.description}}</td>
+                            <td>{{i.status}}</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

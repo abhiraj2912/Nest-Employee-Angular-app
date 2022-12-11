@@ -12,6 +12,9 @@ import { AddEmployeeComponent } from './add-employee/add-employee.component';
 import { ViewTaskComponent } from './view-task/view-task.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { AdminNavbarComponent } from './admin-navbar/admin-navbar.component';
+import { EmployeeTaskViewComponent } from './employee-task-view/employee-task-view.component';
+import { UserNavbarComponent } from './user-navbar/user-navbar.component';
+import { UpdateStatusComponent } from './update-status/update-status.component';
 
 const myRoute:Routes=[
   {
@@ -33,6 +36,10 @@ const myRoute:Routes=[
   {
     path:"addtask",
     component:AddTaskComponent
+  },
+  {
+    path:"empviewtask",
+    component:EmployeeTaskViewComponent
   }
 ]
 
@@ -44,14 +51,18 @@ const myRoute:Routes=[
     AddEmployeeComponent,
     ViewTaskComponent,
     AddTaskComponent,
-    AdminNavbarComponent
+    AdminNavbarComponent,
+    EmployeeTaskViewComponent,
+    UserNavbarComponent,
+    UpdateStatusComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    RouterModule.forRoot(myRoute),
     FormsModule,
-    HttpClientModule,
-    RouterModule.forRoot(myRoute)
+    HttpClientModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,6 +11,7 @@ export class AdminLoginComponent {
   constructor (private route:Router){}
   username=""
   password=""
+  
   loginValues=()=>{
     if (this.username=="admin" && this.password=="12345") {
       this.route.navigate(['/addemp'])

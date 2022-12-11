@@ -32,5 +32,14 @@ export class ApiService {
   }
 
   adminTaskSearch=(employeename:any)=>
-  {return this.http.post("http://localhost:8080/adminsearchtask",employeename)}
+  {
+    return this.http.post("http://localhost:8080/adminsearchtask",employeename)
+  }
+
+  adminEmployeeSearch=(employeename:any)=>
+  {
+    return this.http.post("http://localhost:8080/adminsearchemp",employeename)
+  }
+
+  
 }
